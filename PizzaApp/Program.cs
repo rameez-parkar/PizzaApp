@@ -6,7 +6,8 @@ namespace PizzaApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Pizza pizza = new Pizza();
+            pizza.CustomizePizza();
         }
     }
 }

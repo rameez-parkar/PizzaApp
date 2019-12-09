@@ -1,0 +1,11 @@
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\bin\Debug\netcoreapp2.2\PizzaApp.deps.json
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\bin\Debug\netcoreapp2.2\PizzaApp.runtimeconfig.json
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\bin\Debug\netcoreapp2.2\PizzaApp.runtimeconfig.dev.json
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\bin\Debug\netcoreapp2.2\PizzaApp.dll
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\bin\Debug\netcoreapp2.2\PizzaApp.pdb
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\obj\Debug\netcoreapp2.2\PizzaApp.csprojAssemblyReference.cache
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\obj\Debug\netcoreapp2.2\PizzaApp.csproj.CoreCompileInputs.cache
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\obj\Debug\netcoreapp2.2\PizzaApp.AssemblyInfoInputs.cache
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\obj\Debug\netcoreapp2.2\PizzaApp.AssemblyInfo.cs
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\obj\Debug\netcoreapp2.2\PizzaApp.dll
+C:\Users\rparkar\Desktop\ORXe\Training\PizzaApp\PizzaApp\obj\Debug\netcoreapp2.2\PizzaApp.pdb
