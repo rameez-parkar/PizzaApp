@@ -6,32 +6,29 @@ namespace PizzaApp
 {
     class Pizza
     {
-        string pizzaBase;
-        string size;
-        string[] toppings;
+        public int pizzaId { get; set; }
+        public string pizzaBase { get; set; }
+        public string size { get; set; }
+        public string[] toppings { get; set; }
+
+        public Pizza(int pizzaId)
+        {
+            this.pizzaId = pizzaId;
+        }
 
         public void CustomizePizza()
         {
             pizzaBase = SetPizzaBase();
-            Console.WriteLine("You chose : " + pizzaBase);
 
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
 
             size = SetPizzaSize();
-            Console.WriteLine("You chose : " + size);
 
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
 
             toppings = SetPizzaToppings();
-            Console.WriteLine("You chose : ");
-            foreach (string topping in toppings)
-            {
-                Console.WriteLine(topping);
-            }
 
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-
-            Console.ReadKey();
         }
 
         private string SetPizzaBase()
