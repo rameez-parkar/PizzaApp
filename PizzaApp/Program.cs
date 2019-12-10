@@ -25,6 +25,21 @@ namespace PizzaApp
                     cart.AddPizza(pizza);
                 }
                 cart.DisplayCartItems();
+
+                Console.WriteLine("\nProceed To Order? (y/n)");
+                char proceedToOrder = char.Parse(Console.ReadLine());
+                if (proceedToOrder == 'y')
+                {
+                    Random random = new Random();
+                    int orderId = random.Next(1, 1000);
+                    Booking booking = new Booking(orderId, cart);
+                    booking.ConfirmBooking();
+                    Console.WriteLine("Order Placed! Press any button to exit...");
+                }
+                else
+                {
+                    Console.WriteLine("Order Cancelled! Press any button to exit...");
+                }
             }
             Console.ReadKey();
         }

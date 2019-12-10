@@ -4,9 +4,10 @@ using System.Text;
 
 namespace PizzaApp
 {
-    class Cart
+    public class Cart
     {
         List<Pizza> cartItems = new List<Pizza>();
+        public double totalPrice { get; set; } = 0;
 
         public void AddPizza(Pizza pizza)
         {
@@ -15,8 +16,7 @@ namespace PizzaApp
 
         public void DisplayCartItems()
         {
-            double totalPrice = 0;
-            Console.WriteLine("\n-----------------Cart Items-----------------");
+            Console.WriteLine("\n-----------------CART ITEMS-----------------");
             foreach(Pizza pizza in cartItems)
             {
                 double pizzaPrice = 0;

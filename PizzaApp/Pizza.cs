@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PizzaApp
 {
-    class Pizza
+    public class Pizza
     {
         public int pizzaId { get; set; }
         public PizzaBase pizzaBase { get; set; }
