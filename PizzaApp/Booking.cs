@@ -6,8 +6,8 @@ namespace PizzaApp
 {
     public class Booking
     {
-        public int orderId { get; set; }
-        public Cart cart { get; set; }
+        public int orderId { get; private set; }
+        public Cart cart { get; private set; }
 
         public Booking(int orderId, Cart cart)
         {

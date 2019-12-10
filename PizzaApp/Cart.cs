@@ -7,7 +7,7 @@ namespace PizzaApp
     public class Cart
     {
         List<Pizza> cartItems = new List<Pizza>();
-        public double totalPrice { get; set; } = 0;
+        public double totalPrice { get; private set; } = 0;
 
         public void AddPizza(Pizza pizza)
         {
@@ -28,10 +28,10 @@ namespace PizzaApp
                 Console.WriteLine(" Pizza Toppings : ");
                 foreach(Topping topping in pizza.toppings)
                 {
-                    Console.WriteLine("  -"+topping.name);
+                    Console.WriteLine(" - "+topping.name);
                     pizzaPrice += topping.price;
                 }
-                Console.WriteLine(" Cost of Pizza "+pizza.pizzaId+" = Rs. "+pizzaPrice);
+                Console.WriteLine(" Cost of Pizza #"+pizza.pizzaId+" = Rs. "+pizzaPrice);
                 totalPrice += pizzaPrice;
                 Console.WriteLine("--------------------------------------------");
             }
