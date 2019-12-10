@@ -15,19 +15,28 @@ namespace PizzaApp
 
         public void DisplayCartItems()
         {
+            double totalPrice = 0;
             Console.WriteLine("\n-----------------Cart Items-----------------");
             foreach(Pizza pizza in cartItems)
             {
+                double pizzaPrice = 0;
                 Console.WriteLine("#Pizza ID : " + pizza.pizzaId);
-                Console.WriteLine(" Pizza Size : " + pizza.size);
-                Console.WriteLine(" Pizza Base : " + pizza.pizzaBase);
+                Console.WriteLine(" Pizza Size : " + pizza.size.size);
+                pizzaPrice += pizza.size.price;
+                Console.WriteLine(" Pizza Base : " + pizza.pizzaBase.name);
+                pizzaPrice += pizza.pizzaBase.price;
                 Console.WriteLine(" Pizza Toppings : ");
-                foreach(string topping in pizza.toppings)
+                foreach(Topping topping in pizza.toppings)
                 {
-                    Console.WriteLine("  -"+topping);
+                    Console.WriteLine("  -"+topping.name);
+                    pizzaPrice += topping.price;
                 }
+                Console.WriteLine(" Cost of Pizza "+pizza.pizzaId+" = Rs. "+pizzaPrice);
+                totalPrice += pizzaPrice;
                 Console.WriteLine("--------------------------------------------");
             }
+
+            Console.WriteLine("FINAL AMOUNT : Rs. " + totalPrice);
         }
     }
 }

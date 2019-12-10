@@ -4,10 +4,10 @@ using System.Text;
 
 namespace PizzaApp
 {
-    public enum Size
+    public class Size
     {
-        Small = 'S',
-        Medium = 'M',
-        Large = 'L'
+        public char id;
+        public string size;
+        public double price;
     }
 }

@@ -4,17 +4,10 @@ using System.Text;
 
 namespace PizzaApp
 {
-    public enum Topping
+    public class Topping
     {
-        Jalapeno = 1,
-        Paprica,
-        Corn,
-        Capsicum,
-        Paneer,
-        Olives,
-        Mushroom,
-        BBQ_Chicken,
-        Chicken_Sausage,
-        Chicken_Tikka
+        public int id;
+        public string name;
+        public double price;
     }
 }

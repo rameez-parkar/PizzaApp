@@ -7,9 +7,10 @@ namespace PizzaApp
     class Pizza
     {
         public int pizzaId { get; set; }
-        public string pizzaBase { get; set; }
-        public string size { get; set; }
-        public string[] toppings { get; set; }
+        public PizzaBase pizzaBase { get; set; }
+        public Size size { get; set; }
+        public Topping[] toppings { get; set; }
+        MenuOptions menuOptions = new MenuOptions();
 
         public Pizza(int pizzaId)
         {
@@ -31,46 +32,43 @@ namespace PizzaApp
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
         }
 
-        private string SetPizzaBase()
+        private PizzaBase SetPizzaBase()
         {
             Console.WriteLine("Choose Pizza Base (Enter Base Number) : ");
-            foreach (PizzaBase pBase in Enum.GetValues(typeof(PizzaBase)))
+            foreach (PizzaBase pBase in menuOptions.pizzaBases)
             {
-                Console.Write((int)pBase + " - ");
-                Console.WriteLine(pBase);
+                Console.WriteLine(pBase.id + " - "+pBase.name+" - Rs. "+pBase.price);
             }
             int baseNumber = int.Parse(Console.ReadLine());
-            string pizzaBase = Enum.GetName(typeof(PizzaBase), baseNumber);
-            return pizzaBase;
+            PizzaBase selectedBase = menuOptions.pizzaBases.Find(pBase => pBase.id.Equals(baseNumber));
+            return selectedBase;
         }
 
-        private string SetPizzaSize()
+        private Size SetPizzaSize()
         {
             Console.WriteLine("Choose Pizza Size (Enter Size as S, M or L) : ");
-            foreach (Size pSize in Enum.GetValues(typeof(Size)))
+            foreach (Size pSize in menuOptions.sizes)
             {
-                Console.Write((char)pSize + " - ");
-                Console.WriteLine(pSize);
+                Console.WriteLine(pSize.id + " - " + pSize.size + " - Rs. " + pSize.price);
             }
             char sizeValue = char.Parse(Console.ReadLine());
-            string size = Enum.GetName(typeof(Size), sizeValue);
-            return size;
+            Size selectedSize = menuOptions.sizes.Find(pSize => pSize.id.Equals(sizeValue));
+            return selectedSize;
         }
 
-        private string[] SetPizzaToppings()
+        private Topping[] SetPizzaToppings()
         {
             Console.WriteLine("Choose Toppings (Enter Toppings as 0,5,6 ) : ");
-            foreach (Topping pTopping in Enum.GetValues(typeof(Topping)))
+            foreach (Topping pTopping in menuOptions.toppings)
             {
-                Console.Write((int)pTopping + " - ");
-                Console.WriteLine(pTopping);
+                Console.WriteLine(pTopping.id + " - " + pTopping.name + " - Rs. " + pTopping.price);
             }
             string[] toppingsValues = Console.ReadLine().Split(",");
-            string[] toppings = new string[toppingsValues.Length];
+            Topping[] toppings = new Topping[toppingsValues.Length];
             int index = 0;
             foreach (string toppingsValue in toppingsValues)
             {
-                toppings[index] = Enum.GetName(typeof(Topping), int.Parse(toppingsValue));
+                toppings[index] = menuOptions.toppings.Find(pTopping => pTopping.id.Equals(int.Parse(toppingsValue)));
                 index++;
             }
             return toppings;

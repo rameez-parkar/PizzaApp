@@ -4,11 +4,10 @@ using System.Text;
 
 namespace PizzaApp
 {
-    public enum PizzaBase
+    public class PizzaBase
     {
-        Hand_Tossed = 1,
-        Thin_Crust,
-        Cheese_Burst,
-        Pan_Pizza
+        public int id;
+        public string name;
+        public double price;
     }
 }
